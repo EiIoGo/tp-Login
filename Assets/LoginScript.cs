@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PasswordComprobador : MonoBehaviour
+public class LoginScript : MonoBehaviour
 {
-    const string pass = "12345";
+    const string password = "admin";
 
-    public InputField password;
-    public Button boton;
+    public InputField TXTpassword;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +20,9 @@ public class PasswordComprobador : MonoBehaviour
         
     }
 
-    public void Presionar()
+    public void CheckPassword()
     {
-        if(password.text == pass)
+        if(TXTpassword.text == password)
         {
             Debug.Log("Access granted");
         }
